@@ -1,0 +1,15 @@
+[connection]
+id=bridge-slave-enp130s0
+uuid=34d5a86b-3854-4d8f-a058-b6f0749dd995
+type=ethernet
+interface-name=enp130s0
+master=vmbr0
+permissions=
+slave-type=bridge
+timestamp=1603826057
+
+[ethernet]
+mac-address-blacklist=
+mtu=9000
+
+[bridge-port]
