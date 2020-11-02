@@ -4,3 +4,4 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+focal-server-cloudimg-amd64.img
