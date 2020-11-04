@@ -4,7 +4,7 @@ variable "domain" { default = "lan.kroy.io" }
 variable "memoryGB" { default = 2 }
 variable "cpu" { default = 2 }
 variable "network" { default = "vibr20" }
-variable "disksize" { default = 20 }
+variable "disksizeGB" { default = 20 }
 
 
 
@@ -12,7 +12,7 @@ resource "libvirt_volume" "os_image" {
   name = "${var.hostname}-os_image"
   pool   = "VM"
   base_volume_id = libvirt_volume.os_tmpl.id
-  size = var.disksize * 1024 * 1024 * 1024
+  size = var.disksizeGB * 1024 * 1024 * 1024
 }
 
 # Use CloudInit ISO to add ssh-key to the instance
